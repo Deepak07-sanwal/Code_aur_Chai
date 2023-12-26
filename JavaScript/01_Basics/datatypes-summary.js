@@ -66,3 +66,28 @@ console.log(typeof heros);
 
 // https://262.ecma-international.org/5.1/#sec-8.6.2
 
+// +++++++++++++++++++++++++++++++++++++++++++
+
+// Memorys in javascript
+// 1. stack (Primitive data types) (get copy of data)
+// 2. heap (Non-primitive data types) (get reference of data)
+
+let myYoutubename = "deepaksanwal";
+
+let myAnotherYoutubeName = myYoutubename;
+// copy of myYoutubename is stored in myAnotherYoutubeName
+
+myAnotherYoutubeName = "sharpcoder";
+console.log(myYoutubename, myAnotherYoutubeName);
+
+let userOne = {
+    email: "abc@gmail.com",
+    upi: "abc@okhdfcbank"
+}
+
+let userTwo = userOne;
+// pass by reference 
+userTwo.email = "mno@abc.com";
+
+console.log(userOne.email, userTwo.email);
+// mno@abc, mno@abc -> because both are pointing to same memory location
